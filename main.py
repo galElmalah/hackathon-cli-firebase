@@ -10,7 +10,14 @@ def exportCitationsAPI(data, project):
 
 
 def createCitation(author="",title="",date=time.strftime("%c"),Spage=0,Epage=0,company="", address="",comment=""):
-    cit = {"author":author,"title":title,"pages":(Spage,Epage),"publication":company,"address":address,"date":date}
+    cit = {
+    "author":author,
+    "title":title,
+    "pages":(Spage,Epage),
+    "publication":company,
+    "address":address,
+    "date":date
+    }
     return cit
 
 p=createCitation('ddd','dd',datetime.datetime(2009, 10, 5).isoformat(' '),5,8,"sd","sksk")
@@ -83,6 +90,16 @@ def getSpecificProject(user,projectName):
     for i in range(length):
         if (user == projects[i]["user"]) and (projectName == projects[i]["nameOfProject"]):
             return projects[i]
+
+def createProject(userName,projectName):
+    project = {
+  "citations": [],
+  "user": userName,
+  "nameOfProject": projectName,
+  "projectStatus":"projected"
+}
+
+
 
 if(args.list):
     listCitations(args.user, args.project)
