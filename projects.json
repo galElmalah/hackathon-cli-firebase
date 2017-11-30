@@ -1,4 +1,69 @@
-[{ "user":"gal"
-  ,"nameOfProject": "big animals",
-   "citations": [{"date": "21 04 1993", "publication": "blabla", "pcomment": "bla and blabla and some other blala", "address": "gal", "author": "ff", "start_end": [23, 28], "title": "cats"}]
-   }]
+[{
+  "citations": [{
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  }],
+  "user": "gal",
+  "nameOfProject": "big animals"
+}, {
+  "citations": [{
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  }],
+  "user": "gal",
+  "nameOfProject": "big animals123"
+}, {
+  "citations": [{
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  },{
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  },{
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "address": "gaddl",
+    "title": "catdds",
+    "publication": "bladdbla",
+    "author": "ff",
+    "date": "21 04 1993"
+  },{
+    "pcomment": "bdsflabla and some other blala",
+    "start_end": [23, 36],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  },{
+    "pcomment": "bldsaflala",
+    "start_end": [18, 28],
+    "address": "gal",
+    "title": "cats",
+    "publication": "blabla",
+    "author": "ff",
+    "date": "21 04 1993"
+  }],
+  "user": "sean",
+  "nameOfProject": "big animals123"
+}]
