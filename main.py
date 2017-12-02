@@ -73,4 +73,14 @@ if(session.inSession(args.user)):
     elif(args.add == "citation"):
         project.addNewCitation(user,args.project,args.author,args.title,args.date,args.startpage,args.endpage,args.publication,args.address,args.comment)
 
+    if(args.delete == "project"):
+        project.deleteProjectById(user,args.project,arg.id)
+    elif(args.delete == "citation"):
+        project.deleteCitationById(user,args.project,arg.id)
+
+
+    
+else:
+    print("unauthorized action. You need to be logged-in in order to preform this action")
 # project.deleteCitationById("gal123","big animals123",1)
+project.searchCitaions("gal","cat")
