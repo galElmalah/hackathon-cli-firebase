@@ -5,7 +5,9 @@ import time
 # fetch the projects file
 def fetchProjects():
     jsonFile = open('./JSON/projects.json', 'r')
-    return json.load(jsonFile)
+    jsonData = json.load(jsonFile)
+    jsonFile.close()
+    return jsonData
     
 
 # save the changes we did on the projects file
@@ -16,7 +18,7 @@ def saveProject(jsonData):
     f.close()
 
 
-# START OF CITATION AND PROJECT FUNCTIONS
+
 
 def exportCitationsAPI(data, project):
     r = requests.put()
@@ -40,12 +42,21 @@ def displayCitation(citation):
 
 def listCitations(user,projectName):
     # get the specific project
-    project = getSpecificProject(user,projectName)
+    project,projects = getSpecificProject(user,projectName)
     # print all of the citations
     for i in range(len(project['citations'])):
         print("-- Citation {} --".format(i+1))
         displayCitation(project['citations'][i])
         print("----------------")
+
+def listProjects(userName):
+    projects = fetchProjects()
+    i = 0
+    print(userName+" projects")
+    for project in projects:
+        if project["user"] == userName:
+            print("{0}.Project Name: {1}".format(i+1, project["nameOfProject"]))
+            i+=1
 
 # check if there is a project associated to a certain user
 def projectExist(user,projectName):
@@ -61,8 +72,8 @@ def getSpecificProject(user,projectName):
     projects = fetchProjects()
     length = len(projects)
     for i in range(length):
-        if (user == projects[i]["user"]) and (projectName == projects[i]["nameOfProject"]):
-            return projects[i]
+        if user == projects[i]["user"] and projectName == projects[i]["nameOfProject"]:
+            return projects[i],projects
 
 def createProject(userName,projectName):
     project = {
@@ -82,6 +93,8 @@ def addNewProject(userName,projectName):
     projects.append(proj)
     saveProject(projects)
 
+
+## fix it to getSpecific Project motherrr ufckreeejfslkfjsdlf ##
 def addNewCitation(user,projectName,author="",title="",date="",Spage=0,Epage=0,company="", address="",comment=""):
     citation = {
     "author":author,
@@ -96,13 +109,19 @@ def addNewCitation(user,projectName,author="",title="",date="",Spage=0,Epage=0,c
     project = None
     length = len(projects)
     for i in range(length):
-        if (user == projects[i]["user"]) and (projectName == projects[i]["nameOfProject"]):
+        if user == projects[i]["user"] and projectName == projects[i]["nameOfProject"]:
             project =  projects[i]
             break
+    print(project)
     if(project):
         project["citations"].append(citation)
-
-    saveProject(projects)
+        saveProject(projects)
+   
+def deleteCitationById(userName,project,id):
+        project,projects = getSpecificProject(userName,project)
+        if id>0 and id<=len(project["citations"]):
+           del project["citations"][id-1]
+        saveProject(projects)
 
 
 # END OF CITATION AND PROJECT FUNCTIONS ------------------------------------------------------------------------

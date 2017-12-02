@@ -1,5 +1,6 @@
 import json
 import time
+import hashlib
 
 # fetch the Users file
 def fetchUsers():
@@ -19,7 +20,7 @@ def saveUsers(jsonData):
 
 def register(name,password):
     if(name=="" or password==""):
-        print("name and password cannot remain emoty")
+        print("name and password cannot remain empty")
         return False
 
     if(not userExist(name)):
@@ -31,6 +32,7 @@ def register(name,password):
         users=fetchUsers()
         users.append(user)
         saveUsers(users)
+        return True
 
 # check if a user exist
 def userExist(name):
@@ -49,3 +51,5 @@ def validateLogin(name,password):
         if name == x["user"] and hashed_password == x["password"]:
             return True
     return False
+
+

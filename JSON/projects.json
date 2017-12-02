@@ -1,1 +1,126 @@
-[{"citations": [{"start_end": [23, 28], "title": "cats", "author": "ff", "pcomment": "bla and blabla and some other blala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}, {"title": "wtf", "author": "eleleiee", "pages": [10, 15], "address": "s;dfk", "publication": "ddd", "date": "21 4 1993"}], "nameOfProject": "big animals", "user": "gal", "projectStatus": "projected"}, {"citations": [{"start_end": [23, 28], "title": "cats", "author": "ff", "pcomment": "bla and blabla and some other blala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}], "nameOfProject": "big animals123", "user": "gal"}, {"citations": [{"start_end": [23, 28], "title": "cats", "author": "ff", "pcomment": "bla and blabla and some other blala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}, {"start_end": [23, 28], "title": "cats", "author": "ff", "pcomment": "bla and blabla and some other blala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}, {"start_end": [23, 28], "title": "catdds", "author": "ff", "pcomment": "bla and blabla and some other blala", "address": "gaddl", "publication": "bladdbla", "date": "21 04 1993"}, {"start_end": [23, 36], "title": "cats", "author": "ff", "pcomment": "bdsflabla and some other blala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}, {"start_end": [18, 28], "title": "cats", "author": "ff", "pcomment": "bldsaflala", "address": "gal", "publication": "blabla", "date": "21 04 1993"}], "nameOfProject": "big animals123", "user": "sean"}]
+[{
+  "citations": [{
+    "address": "gal",
+    "title": "cats",
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "date": "21 04 1993",
+    "publication": "blabla",
+    "author": "ff"
+  }, {
+    "address": "s;dfk",
+    "title": "wtf",
+    "pages": [10, 15],
+    "date": "21 4 1993",
+    "publication": "ddd",
+    "author": "eleleiee"
+  }],
+  "user": "gal",
+  "projectStatus": "projected",
+  "nameOfProject": "big animals"
+}, {
+  "user": "gal123",
+  "citations": [{
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }, {
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }, {
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }, {
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }, {
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }, {
+    "address": "21 jonatan st",
+    "title": "bbb",
+    "pages": ["13", "28"],
+    "date": "21 4 1993",
+    "publication": "yamit",
+    "author": "gal"
+  }],
+  "nameOfProject": "big animals123"
+}, {
+  "user": "sean",
+  "citations": [{
+    "address": "gal",
+    "title": "cats",
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "date": "21 04 1993",
+    "publication": "blabla",
+    "author": "ff"
+  }, {
+    "address": "gal",
+    "title": "cats",
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "date": "21 04 1993",
+    "publication": "blabla",
+    "author": "ff"
+  }, {
+    "address": "gaddl",
+    "title": "catdds",
+    "pcomment": "bla and blabla and some other blala",
+    "start_end": [23, 28],
+    "date": "21 04 1993",
+    "publication": "bladdbla",
+    "author": "ff"
+  }, {
+    "address": "gal",
+    "title": "cats",
+    "pcomment": "bdsflabla and some other blala",
+    "start_end": [23, 36],
+    "date": "21 04 1993",
+    "publication": "blabla",
+    "author": "ff"
+  }, {
+    "address": "gal",
+    "title": "cats",
+    "pcomment": "bldsaflala",
+    "start_end": [18, 28],
+    "date": "21 04 1993",
+    "publication": "blabla",
+    "author": "ff"
+  }],
+  "nameOfProject": "big animals123"
+}, {
+  "citations": [],
+  "user": "gal123",
+  "projectStatus": "projected",
+  "nameOfProject": "blabla"
+}, {
+  "citations": [],
+  "user": "gal123",
+  "projectStatus": "projected",
+  "nameOfProject": "blabla"
+}, {
+  "citations": [],
+  "user": "gal123",
+  "projectStatus": "projected",
+  "nameOfProject": "blabla"
+}]

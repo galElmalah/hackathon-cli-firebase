@@ -30,3 +30,10 @@ def updateSession():
     session = fetchUsersSession()
     new_session =list( filter(lambda x: time.time()-int(x["timeStamp"])<3600,session))
     saveUsersSession(new_session)
+
+def inSession(userName):
+    session = fetchUsersSession()
+    for user in session:
+        if user["user"] == userName:
+            return True
+    return False
