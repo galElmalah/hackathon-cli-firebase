@@ -97,7 +97,6 @@ def addNewCitation(user, projectName, author="", title="", date="", Spage=0, Epa
     }
 
     project, projects = getSpecificProject(user,projectName)
-    print(project)
     if(project):
         project["citations"].append(citation)
         saveProject(projects)
@@ -105,16 +104,19 @@ def addNewCitation(user, projectName, author="", title="", date="", Spage=0, Epa
         print("No such project")
 
 def deleteCitationById(userName, project, id):
+    id=int(id)
     project, projects = getSpecificProject(userName, project)
     if id > 0 and id <= len(project["citations"]):
         del project["citations"][id - 1]
     saveProject(projects)
 
-def deleteProjectById(userName, project, id):
+def deleteProjectByName(userName, project):
     projects = fetchProjects()
-    if id > 0 and id <= len(projects):
-        del projects[id - 1]
-        saveProject(projects)
+    for i in range(len(projects)):
+        if(projects[i]["user"] == userName and projects[i]["nameOfProject"] == project):
+            del projects[i]
+            saveProject(projects)
+            break
 
 def searchCitaions(user, searchPhrase):
     projects = fetchProjects()

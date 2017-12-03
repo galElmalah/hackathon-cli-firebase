@@ -24,7 +24,9 @@ parser.add_argument("-f", "--field", help="Select a field to edit.")
 parser.add_argument("-re", "--read", help="Read a single citation by project and id.")
 parser.add_argument("-e", "--export", help="Exporting all of the citations in a desired format for a given project.")
 parser.add_argument("-d", "--delete", help="Delete a project by project name.")
-parser.add_argument("-id", "--id", help="id for selectiong a specific project or citation.")
+parser.add_argument("-id", "--id", help="Id for selectiong a specific project or citation.")
+parser.add_argument("-ed","--edit",help="Edit citation by id, username and project")
+parser.add_argument("-s","--search",help="Edit citation by id, username and project")
 
 # arguments for the citation 
 parser.add_argument("-au", "--author", help="The author field.")
@@ -39,11 +41,11 @@ args = parser.parse_args()
 
 # Registering
 if(args.register):
-    if(args.user and args.password):
+    if(args.user and args.password and not users.userExist(args.user)):
         users.register(args.user, args.password)
         print("registerd: {}".format(args.user))
     else:
-        print("username and password blablab")
+        print("username already exist")
 
 # Loging into the system
 if(args.login):
@@ -74,13 +76,15 @@ if(session.inSession(args.user)):
         project.addNewCitation(user,args.project,args.author,args.title,args.date,args.startpage,args.endpage,args.publication,args.address,args.comment)
 
     if(args.delete == "project"):
-        project.deleteProjectById(user,args.project,arg.id)
+        project.deleteProjectByName(user,args.project)
     elif(args.delete == "citation"):
-        project.deleteCitationById(user,args.project,arg.id)
+        project.deleteCitationById(user,args.project,args.id)
 
+    if(args.search):
+        project.searchCitaions(user,args.search)
 
     
-else:
-    print("unauthorized action. You need to be logged-in in order to preform this action")
-# project.deleteCitationById("gal123","big animals123",1)
-project.searchCitaions("gal","cat")
+# else:
+#     print("unauthorized action. You need to be logged-in in order to preform this action")
+# # project.deleteCitationById("gal123","big animals123",1)
+# project.searchCitaions("gal","cat")
